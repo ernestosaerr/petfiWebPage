@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Mascotas</title>
+    <link rel="stylesheet" href="stylesHomePage.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="user-info">
+                <img src="https://avatars.githubusercontent.com/u/96704418?v=4" alt="Usuario" class="user-icon">
+                <span class="user-name">Ernesto Saer</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="cards-container">
+        </div>
+        <button id="add-pet-button">Agregar nueva mascota</button>
+        
+        <form id="new-pet-form" style="display: none;">
+            <label for="pet-name">Nombre:</label>
+            <input type="text" id="pet-name" name="pet-name" required>
+            <label for="pet-age">Edad:</label>
+            <input type="number" id="pet-age" name="pet-age" required>
+            <label for="pet-breed">Raza:</label>
+            <input type="text" id="pet-breed" name="pet-breed" required>
+            <label for="pet-weight">Peso:</label>
+            <input type="number" id="pet-weight" name="pet-weight" required>
+            <button type="submit">Registrar Mascota</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; PETFI</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
