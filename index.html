@@ -3,48 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Mascotas</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Mascotas</title>
+    <link rel="stylesheet" href="stylesIndex.css">
 </head>
 <body>
-    <header>
-        <div class="top-bar">
-            <div class="user-info">
-                <img src="https://avatars.githubusercontent.com/u/96704418?v=4" alt="Usuario" class="user-icon">
-                <span class="user-name">Ernesto Saer(usuario1)</span>
+    <div class="container">
+        <div class="left-side">
+            <div class="carousel">
+                <img src="https://img.freepik.com/foto-gratis/perro-alto-angulo-mirando-arriba-sobre-fondo-amarillo_23-2148415222.jpg" alt="Imagen de un perro" class="carousel-image">
+                <img src="https://www.semana.com/resizer/AfpbiiobE_ZuLLKWy9ZMnhkWhjA=/arc-anglerfish-arc2-prod-semana/public/2CQBVNCQBFA37I7A3ROSV6OBXY.jpg" alt="Imagen de un cachorro" class="carousel-image">
+                <img src="https://images.ctfassets.net/denf86kkcx7r/4IPlg4Qazd4sFRuCUHIJ1T/f6c71da7eec727babcd554d843a528b8/gatocomuneuropeo-97" alt="Imagen de un gato" class="carousel-image">
             </div>
         </div>
-    </header>
-    <main>
-        <div class="cards-container"></div>
-        <button id="add-pet-button">Agregar nueva mascota</button>
-        
-        <form id="new-pet-form" style="display: none;">
-            <label for="pet-name">Nombre:</label>
-            <input type="text" id="pet-name" name="pet-name" required>
-            <label for="pet-age">Edad:</label>
-            <input type="number" id="pet-age" name="pet-age" min="0" required>
-            <label for="pet-breed">Raza:</label>
-            <select id="pet-breed" name="pet-breed" required>
-                <option value="">Seleccione una raza</option>
-                <option value="Labrador">Labrador</option>
-                <option value="Bulldog">Bulldog</option>
-                <option value="Beagle">Beagle</option>
-                <option value="Poodle">Poodle</option>
-                <option value="Rottweiler">Rottweiler</option>
-                <option value="Pastor Alemán">Pastor Alemán</option>
-                <option value="Golden Retriever">Golden Retriever</option>
-                <option value="Chihuahua">Chihuahua</option>
-                <option value="Husky">Husky</option>
-                <option value="Doberman">Doberman</option>
-            </select>
-            <label for="pet-weight">Peso(kg):</label>
-            <input type="number" id="pet-weight" name="pet-weight" min="0" required>
-            <button type="submit">Registrar Mascota</button>
-        </form>
-    </main>
+        <div class="right-side">
+            <div class="login-container">
+                <h1>Bienvenido</h1>
+                <form action="dashboard.html" method="post">
+                    <input type="text" name="username" placeholder="Usuario" required>
+                    <input type="password" name="password" placeholder="Contraseña" required>
+                    <button class="boton-Sesion" type="submit">Iniciar Sesión</button>
+                </form>
+                <button class="boton-registro" onclick="location.href='register.html'">Registrarse</button>
+            </div>
+        </div>
+    </div>
     <footer>
-        <p>&copy; PETFI</p>
+        <p>&copy; DevKings</p>
     </footer>
     <script src="script.js"></script>
 </body>
