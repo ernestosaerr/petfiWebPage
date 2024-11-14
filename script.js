@@ -38,3 +38,31 @@ document.getElementById('new-pet-form').addEventListener('submit', function(even
     document.getElementById('new-pet-form').reset();
     document.getElementById('new-pet-form').style.display = 'none';
 });
+
+
+document.getElementById('new-pet-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('pet-name').value;
+    const age = document.getElementById('pet-age').value;
+    const breed = document.getElementById('pet-breed').value;
+    const weight = document.getElementById('pet-weight').value;
+    const user = auth.currentUser;
+
+    if (user) {
+        db.collection('pets').add({
+            name: name,
+            age: age,
+            breed: breed,
+            weight: weight,
+            owner_id: user.uid
+        })
+        .then(() => {
+            alert('Pet added successfully');
+        })
+        .catch((error) => {
+            alert('Error adding pet: ' + error.message);
+        });
+    } else {
+        alert('No user is signed in');
+    }
+});
